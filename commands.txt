@@ -1,0 +1,56 @@
+    1  git clone https://github.com/Sivaneni/encryption_kube.git
+    2  ls
+    3  cd encryption_kube/
+    4  ls
+    5  clear
+    6  ls
+    7  cat kube-apiserver.yaml 
+    8  mkdir /etc/kubernetes/enc
+    9  ls
+   10  cp enc.yaml /etc/kubernetes/enc/
+   11  ls /etc/kubernetes/enc/
+   12  vi /etc/kubernetes/enc/
+   13  vi /etc/kubernetes/enc/enc.yaml 
+   14  ls /etc/kubernetes/manifests/
+   15  cp kube-apiserver.yaml kube-apiserver_bckp.yaml 
+   16  ls /etc/kubernetes/manifests/
+   17  ls
+   18  rm -f kube-apiserver_bckp.yaml 
+   19  cp /etc/kubernetes/manifests/kube-apiserver.yaml kube-apiserver_bckp.yaml 
+   20  ls
+   21  cat kube-apiserver
+   22  cat kube-apiserver.yaml
+   23  ls /etc/kubernetes/manifests/
+   24  kubectl create secret generic -h
+   25  kubectl create secret generic my-secret --from-literal=key1=supersecret
+   26  kubectl get secrets my-secret -o yaml
+   27  echo "c3VwZXJzZWNyZXQ=" | base64 -d
+   28  ls /registry/secrets/default
+   29  apt update
+   30  apt-get install etcdctl-client 
+   31  apt install etcdctl-client 
+   32  apt install etcd-client 
+   33  apt update
+   34  ETCDCTL_API=3 etcdctl    --cacert=/etc/kubernetes/pki/etcd/ca.crt      --cert=/etc/kubernetes/pki/etcd/server.crt    --key=/etc/kubernetes/pki/etcd/server.key     get /registry/secrets/default/my-secret | hexdump -C
+   35  vi /etc/kubernetes/manifests/kube-apiserver.yaml 
+   36  kubectl get pods -n kube-system
+   37  watch kubectl get pods -n kube-system -o wide
+   38  kubectl get pods -n kube-system -o wide
+   39  ETCDCTL_API=3 etcdctl    --cacert=/etc/kubernetes/pki/etcd/ca.crt      --cert=/etc/kubernetes/pki/etcd/server.crt    --key=/etc/kubernetes/pki/etcd/server.key     get /registry/secrets/default/my-secret | hexdump -C
+   40  kubectl get secrets --all-namespaces -o json | kubectl replace -f -
+   41  ETCDCTL_API=3 etcdctl    --cacert=/etc/kubernetes/pki/etcd/ca.crt      --cert=/etc/kubernetes/pki/etcd/server.crt    --key=/etc/kubernetes/pki/etcd/server.key     get /registry/secrets/default/my-secret | hexdump -C
+   42  kubectl get secrets --all-namespaces -o json | kubectl replace -f -
+   43  ETCDCTL_API=3 etcdctl    --cacert=/etc/kubernetes/pki/etcd/ca.crt      --cert=/etc/kubernetes/pki/etcd/server.crt    --key=/etc/kubernetes/pki/etcd/server.key     get /registry/secrets/default/my-secret | hexdump -C
+   44  vi /etc/kubernetes/enc/enc.yaml 
+   45  kubectl get pods -n kube-system -o wide
+   46  kubectl create secret generic my-secret1 --from-literal=key1=supersecret2
+   47  ETCDCTL_API=3 etcdctl    --cacert=/etc/kubernetes/pki/etcd/ca.crt      --cert=/etc/kubernetes/pki/etcd/server.crt    --key=/etc/kubernetes/pki/etcd/server.key     get /registry/secrets/default/my-secret1 | hexdump -C
+   48  kubectl get pods -n kube-system -o wide
+   49  kubectl get pods -n kube-system
+   50  kubectl delete pod kube-apiserver-controlplane -n kube-system
+   51  kubectl get pods -n kube-system
+   52  vi /etc/kubernetes/enc/enc.yaml 
+   53  kubectl delete pod kube-apiserver-controlplane -n kube-system
+   54  kubectl get pods -n kube-system
+   55  kubectl delete pod kube-apiserver-controlplane -n kube-system
+   56  history
